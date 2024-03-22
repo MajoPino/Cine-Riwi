@@ -37,3 +37,21 @@ body{
         text-decoration: none;
     }
 }
+#estrenos{
+    margin: 20px auto;
+    max-width: 1100px;
+    max-height: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 20px solid rebeccapurple;
+}
+figure {
+    width: 30%;
+}
+img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
