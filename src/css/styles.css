@@ -4,6 +4,9 @@
     --morado-uva: #25183a;
     --blanco-morado: #eae1f7;
     --lavanda: #6262aa;
+    --lavanda-claro: #9d9de7;
+    --lavanda-intermedio: #39267f;
+    --morado-clarito: #5639bf;
     --tamaño-text-normal: 1rem;
 }
 
@@ -13,45 +16,167 @@
     padding: 0;
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
+    outline: none;
 }
 body{
     background-color: var(--lavanda);
 }
-.header{
-    padding: 5px 15px;
-    height: 6vh;
+header{
+    background-color: var(--morado-uva);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    color: var(--blanco-morado);
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--morado-uva);
-    color: var(--blanco-morado);
-    font-weight: bolder;
-    font-size: var(--tamaño-text-normal);
-    font-style: normal;
 }
-.navbar{
-    & a{
-        margin: 0px 5px;
-        color: var(--blanco-morado);
-        font-weight: lighter;
-        text-decoration: none;
-    }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--blanco-morado);
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a i {
+    margin-right: 5px;
+}
+
+main{
+    padding-top: 5%;
 }
 #estrenos{
     margin: 20px auto;
-    max-width: 1100px;
+    max-width: 1000px;
     max-height: 750px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    border: 20px solid rebeccapurple;
+    justify-content: center; 
 }
 figure {
     width: 30%;
+    & img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    & img:hover{
+        border: 8px solid var(--lavanda-claro);
+    }
 }
-img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
+#cartelera{
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
+.pelicula-cartelera{
+    background-color: var(--lavanda-intermedio);
+    color: var(--blanco-morado);
+    border-radius: 31px;
+    box-shadow:  6px 6px 0px var(--morado-uva),
+             -6px -6px 0px var(--morado-clarito);
+    width: 500px;
+    height: 380px;
+    margin: 12px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & img{
+        height: 200px;
+        width: 150px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    & figcaption{
+        font-weight: bolder;
+        font-size: x-large;
+        margin-bottom: 10px;
+    }
+    & p{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    & button{
+        background-color: var(--morado-uva);
+        color: var(--blanco-morado);
+        border-radius: 5px;
+        border-color: var(--morado-uva);
+        height: 25px;
+        width: 120px;
+    }
+    & button:hover{
+        background-color: var(--lavanda);
+    }
+}
+.contacto-container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & h2{
+        font-size: xx-large;
+        margin-bottom: 10px;
+    }
+    & p{
+        font-size: larger;
+        margin-bottom: 30px;
+    }
+    & form{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        & input{
+            height: 40px;
+            width: 500px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 4px;
+        }
+        & textarea{
+            height: 100px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 8px;
+        }
+        & button{
+            height: 40px;
+            background-color: var(--morado-uva);
+            border-color: var(--morado-uva);
+            border-radius: 8px;
+            color: var(--blanco-morado);
+            font-size: larger;
+            margin-bottom: 40px;
+            
+        }
+        & button:hover{
+            background-color: var(--morado-clarito);
+            border-color: var(--morado-clarito);
+        }
+    }
+}
+footer{
+    background-color: var(--morado-uva);
+    color: var(--blanco-morado);
+    text-align: center;
+    padding: 20px 0;
+}
